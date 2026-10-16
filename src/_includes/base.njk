@@ -1,66 +1,104 @@
+{%- set pageTitle = (title + " | " + L.lab_name) if title else (L.lab_name + " | " + L.tagline) -%}
+{%- set pageDescription = description or L.description -%}
+{%- set altUrl = page.url | otherLangUrl(lang) -%}
 <!doctype html>
-<html lang="en">
+<html lang="{{ lang }}">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{% if title %}{{ title }} | {% endif %}{{ site.name }}, {{ site.field }} at {{ site.institution }}</title>
-  <meta name="description" content="{{ description or site.description }}">
-  <meta property="og:title" content="{{ title or site.name }}">
-  <meta property="og:description" content="{{ description or site.description }}">
+  {%- if site.preview %}
+  <meta name="robots" content="noindex, nofollow">
+  {%- endif %}
+  <title>{{ pageTitle }}</title>
+  <meta name="description" content="{{ pageDescription }}">
+  <meta property="og:site_name" content="{{ L.lab_name }}">
+  <meta property="og:title" content="{{ pageTitle }}">
+  <meta property="og:description" content="{{ pageDescription }}">
   <meta property="og:type" content="website">
+  <meta property="og:locale" content="{{ L.og_locale }}">
+  {%- if siteUrl %}
+  <link rel="canonical" href="{{ siteUrl }}{{ page.url }}">
+  {%- if not noAlternate %}
+  <link rel="alternate" hreflang="{{ lang }}" href="{{ siteUrl }}{{ page.url }}">
+  <link rel="alternate" hreflang="{{ L.switch_lang }}" href="{{ siteUrl }}{{ altUrl }}">
+  <link rel="alternate" hreflang="x-default" href="{{ siteUrl }}{{ page.url if lang == 'en' else altUrl }}">
+  {%- endif %}
+  <meta property="og:url" content="{{ siteUrl }}{{ page.url }}">
+  <meta property="og:image" content="{{ siteUrl }}{{ L.og_image }}">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="{{ L.og_alt }}">
+  <meta name="twitter:card" content="summary_large_image">
+  {%- endif %}
   <meta name="theme-color" content="#1C1540">
   <link rel="icon" href="/assets/img/mark.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=Noto+Sans+JP:wght@400..800&display=swap">
   <link rel="stylesheet" href="/assets/css/site.css">
 </head>
 <body>
-  <a class="skip" href="#main">Skip to content</a>
+  <a class="skip" href="#main">{{ L.skip }}</a>
 
   <header class="masthead">
-    <a class="wordmark" href="/" aria-label="{{ site.name }}, home">
+    <a class="wordmark" href="{{ base }}/" aria-label="{{ L.home_label }}">
       {% include "mark.svg" %}
-      <span class="wordmark-name">{{ site.name }}</span>
-      <span class="wordmark-sub">{{ site.field }}, {{ site.institution }}</span>
+      <span class="wordmark-name">{{ L.lab_name }}</span>
+      <span class="wordmark-sub">{{ L.tagline }}</span>
     </a>
-    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
-    <nav id="site-nav" class="nav" aria-label="Main">
-      <a href="/#research">Research</a>
-      <a href="/#people">People</a>
-      <a href="/#publications">Publications</a>
-      <a href="/#news">News</a>
-      <a href="{{ site.japanese_site }}" lang="ja" hreflang="ja">日本語</a>
-      <a class="nav-cta" href="/#join">Join the lab</a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">{{ L.menu }}</button>
+    <nav id="site-nav" class="nav" aria-label="{{ L.nav_label }}">
+      <a href="{{ base }}/#research">{{ L.nav_research }}</a>
+      {%- for item in [[L.nav_people, "/people/"], [L.nav_publications, "/publications/"], [L.nav_news, "/news/"]] %}
+      {%- set href = base + item[1] %}
+      <a href="{{ href }}"{% if page.url == href %} aria-current="page"{% endif %}>{{ item[0] }}</a>
+      {%- endfor %}
+      {%- if not noAlternate %}
+      <a href="{{ altUrl }}" lang="{{ L.switch_lang }}" hreflang="{{ L.switch_lang }}">{{ L.switch_label }}</a>
+      {%- endif %}
+      <a class="nav-cta" href="{{ base }}/#join">{{ L.nav_join }}</a>
     </nav>
   </header>
 
   <main id="main">
+    {%- if title and not hideHeader %}
+    <section class="page-head" aria-labelledby="page-title">
+      <div class="page-head-copy">
+        <h1 id="page-title" class="page-title">{{ title }}</h1>
+        {%- if intro %}<p class="page-intro">{{ intro }}</p>{% endif %}
+      </div>
+      <canvas class="fiber-canvas fiber-strip" data-fiber="strip" aria-hidden="true"></canvas>
+    </section>
+    {%- endif %}
     {{ content | safe }}
   </main>
 
   <footer class="footer">
     <div class="footer-inner">
       <div>
-        <p class="footer-name">{{ site.name }}</p>
-        <p>{{ site.school }}<br>{{ site.institution }}</p>
-        <address>{{ site.address }}</address>
+        <p class="footer-name">{{ L.lab_name }}</p>
+        <p>{{ L.institution }}<br>{{ L.school }}</p>
+        <address>{{ L.address }}</address>
       </div>
       <div>
-        <p class="footer-head">Contact</p>
+        <p class="footer-head">{{ L.contact }}</p>
         <p><a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
         <p><a href="{{ site.facebook }}">Facebook</a></p>
-        <p><a href="{{ site.japanese_site }}" lang="ja" hreflang="ja">日本語のサイト</a></p>
+        {%- if not noAlternate %}
+        <p><a href="{{ altUrl }}" lang="{{ L.switch_lang }}" hreflang="{{ L.switch_lang }}">{{ L.other_language_site }}</a></p>
+        {%- endif %}
       </div>
       <div>
-        <p class="footer-head">Supported by</p>
-        <ul class="funders">
-          {% for f in funding %}<li>{{ f.name }}</li>{% endfor %}
-        </ul>
+        <p class="footer-head">{{ L.explore }}</p>
+        <p><a href="{{ base }}/#research">{{ L.nav_research }}</a></p>
+        <p><a href="{{ base }}/people/">{{ L.nav_people }}</a></p>
+        <p><a href="{{ base }}/publications/">{{ L.publications_and_funding }}</a></p>
+        <p><a href="{{ base }}/news/">{{ L.nav_news }}</a></p>
       </div>
     </div>
   </footer>
 
   <script src="/assets/js/site.js" defer></script>
+  <script src="/assets/js/chromatin.js" defer></script>
 </body>
 </html>

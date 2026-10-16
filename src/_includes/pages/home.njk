@@ -1,0 +1,149 @@
+{#- Home page body, shared by /index.njk and /ja/index.njk. -#}
+<section class="hero" aria-labelledby="hero-title">
+  <div class="hero-copy">
+    <h1 id="hero-title" class="hero-title">{{ L.hero_title }}</h1>
+    <div class="hero-row">
+      <p class="hero-lede">{{ L.hero_lede }}</p>
+      <div class="hero-actions">
+        <a class="button button-primary" href="#research">{{ L.see_research }}</a>
+        <a class="button button-ghost" href="#join">{{ L.nav_join }}</a>
+      </div>
+    </div>
+  </div>
+
+  <figure class="fiber">
+    <canvas class="fiber-canvas" data-fiber="hero" tabindex="0"
+      role="slider" aria-label="{{ L.fiber_label }}"
+      aria-valuemin="0" aria-valuemax="100" aria-valuenow="62"
+      aria-describedby="fiber-desc"></canvas>
+    <p id="fiber-desc" class="visually-hidden">{{ L.fiber_desc }}</p>
+    <figcaption class="fiber-caption">
+      <span class="fiber-track-label">{{ L.fiber_track }}</span>
+      <span class="fiber-hint" data-fiber-hint data-touch-hint="{{ L.fiber_hint_touch }}">{{ L.fiber_hint }}</span>
+    </figcaption>
+  </figure>
+</section>
+
+<section id="research" class="section section-light" aria-labelledby="research-title">
+  <div class="wrap">
+    <header class="section-head">
+      <h2 id="research-title">{{ L.research }}</h2>
+      <p class="section-intro">{{ L.research_intro }}</p>
+    </header>
+    <div class="themes">
+      {%- for theme in research %}
+      <article class="theme" id="{{ theme.id }}">
+        <h3 class="theme-title">{{ theme | loc("title", lang) }}</h3>
+        <div class="theme-body">
+          <p>{{ theme | loc("summary", lang) }}</p>
+          <ul class="tags" aria-label="{{ L.methods }}">
+            {%- for m in theme | loc("methods", lang) %}<li>{{ m }}</li>{% endfor %}
+          </ul>
+          {%- set keyPapers = publications | byTopic(theme.topic, 2) %}
+          {%- if keyPapers | length %}
+          <div class="key-papers">
+            <h4 class="key-papers-head">{{ L.key_papers }}</h4>
+            <ul>
+              {%- for pub in keyPapers %}
+              <li><a href="{{ pub | pubUrl }}" lang="en">{{ pub.title }}</a> <span class="key-papers-meta"><em>{{ pub.journal }}</em>, {{ pub.year }}</span></li>
+              {%- endfor %}
+            </ul>
+          </div>
+          {%- endif %}
+        </div>
+      </article>
+      {%- endfor %}
+    </div>
+  </div>
+</section>
+
+<section id="publications" class="section section-white" aria-labelledby="pubs-title">
+  <div class="wrap">
+    {%- set oldest = publications | last %}
+    <header class="section-head section-head-row">
+      <h2 id="pubs-title">{{ L.selected_publications }}</h2>
+      <p class="section-intro">{{ L.pubs_intro | fill({ n: publications | length, year: oldest.year }) }}</p>
+    </header>
+    <ol class="pubs">
+      {%- set maxAuthors = 6 %}{% set hideYear = true %}
+      {%- for pub in publications %}{% if pub.featured %}
+      <li class="pub">
+        <p class="pub-year">{{ pub.year }}</p>
+        <div class="pub-body">{% include "pub.njk" %}</div>
+      </li>
+      {%- endif %}{% endfor %}
+    </ol>
+    <p class="more"><a class="button button-outline" href="{{ base }}/publications/">{{ L.all_publications | fill({ n: publications | length }) }}</a></p>
+  </div>
+</section>
+
+<section id="people" class="section section-light" aria-labelledby="people-title">
+  <div class="wrap">
+    <header class="section-head">
+      <h2 id="people-title">{{ L.people }}</h2>
+      <p class="section-intro">{{ L.people_intro }}</p>
+    </header>
+
+    {%- for m in members %}{% if m.pi %}
+    <article class="pi">
+      {% set large = true %}{% include "portrait.njk" %}{% set large = false %}
+      <div class="pi-body">
+        <h3 class="pi-name">{% include "pi-name.njk" %}</h3>
+        <p class="pi-role">{{ m | loc("role", lang) }}</p>
+        <p>{{ m | loc("bio", lang) }}</p>
+        <p><a href="{{ base }}/people/#{{ m.name | slugify }}">{{ L.pi_more }}</a></p>
+      </div>
+    </article>
+    {%- endif %}{% endfor %}
+
+    <ul class="members">
+      {%- for m in members %}{% if not m.pi and not m.alumni %}
+      <li class="member">
+        <a class="member-link" href="{{ base }}/people/#{{ m.name | slugify }}">
+          {% include "portrait.njk" %}
+          <h3 class="member-name">{{ m.name_ja if (lang == "ja" and m.name_ja) else (m.short_name or m.name) }}</h3>
+        </a>
+        <p class="member-role">{{ m | loc("role", lang) }}{% if m.since %}{{ L.since | fill({ year: m.since }) }}{% endif %}</p>
+      </li>
+      {%- endif %}{% endfor %}
+    </ul>
+    <p class="more"><a class="button button-outline" href="{{ base }}/people/">{{ L.meet_team }}</a></p>
+  </div>
+</section>
+
+<section id="news" class="section section-white" aria-labelledby="news-title">
+  <div class="wrap">
+    <header class="section-head">
+      <h2 id="news-title">{{ L.news }}</h2>
+    </header>
+    <ol class="news">
+      {%- for item in news %}{% if loop.index <= 4 %}
+      <li class="news-item">
+        <time class="news-date" datetime="{{ item.date }}">{{ item.date | monthYear(lang) }}</time>
+        <p>{{ item | loc("text", lang) }}</p>
+      </li>
+      {%- endif %}{% endfor %}
+    </ol>
+    <p class="more"><a class="button button-outline" href="{{ base }}/news/">{{ L.all_news }}</a></p>
+  </div>
+</section>
+
+<section id="join" class="section join" aria-labelledby="join-title">
+  <div class="wrap join-grid">
+    <div class="join-copy">
+      <h2 id="join-title">{{ L.join_title }}</h2>
+      <p class="join-lede">{{ L.join_lede }}</p>
+      <p>{{ L.join_fit }}</p>
+      <ul class="join-points">
+        {%- for point in L.join_points %}<li>{{ point }}</li>{% endfor %}
+      </ul>
+      <div class="hero-actions">
+        <a class="button button-primary" href="mailto:{{ site.email }}?subject={{ L.email_subject | urlencode }}">{{ L.email_pi }}</a>
+        <a class="button button-ghost" href="{{ site.scholarships }}">{{ L.scholarships }}</a>
+      </div>
+    </div>
+    <figure class="join-photo">
+      <img src="/assets/img/lab/lab-dinner.jpg" alt="{{ L.join_photo_alt }}" width="1600" height="1528" loading="lazy">
+    </figure>
+  </div>
+</section>

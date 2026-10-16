@@ -1,13 +1,9 @@
-# Lab-wide details used across every page.
-name: Yukawa Lab
-field: Chromatin Biology
-institution: Ehime University
-school: Integrated Medical and Agricultural School of Public Health
+# Lab-wide details that are the same in every language. Names, addresses and
+# other translated text live in i18n.yaml.
 email: yukawa.masashi.eg@ehime-u.ac.jp
-address: School of Medicine Main Building, 454 Shitsukawa, Toon, Ehime 791-0204, Japan
 facebook: https://www.facebook.com/profile.php?id=61553511024692
-japanese_site: https://sites.google.com/view/chromatinjp-jp/home
 scholarships: https://web.isc.ehime-u.ac.jp/current/c_scholarship/
-description: >-
-  Yukawa Lab at Ehime University studies how chromatin opens and closes in
-  T cells and in disease, using epigenomic experiments and bioinformatics.
+
+# While true, every page tells search engines not to index it. Set to false
+# once Prof. Yukawa has approved the content, then push.
+preview: true

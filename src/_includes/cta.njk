@@ -1,0 +1,12 @@
+<section class="cta-band" aria-labelledby="cta-title">
+  <div class="wrap cta-inner">
+    <div>
+      <h2 id="cta-title" class="cta-title">{{ L.cta_title }}</h2>
+      <p>{{ L.cta_text }}</p>
+    </div>
+    <div class="hero-actions">
+      <a class="button button-primary" href="mailto:{{ site.email }}?subject={{ L.email_subject | urlencode }}">{{ L.email_pi }}</a>
+      <a class="button button-ghost" href="{{ base }}/#join">{{ L.how_to_join }}</a>
+    </div>
+  </div>
+</section>

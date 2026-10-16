@@ -1,18 +1,28 @@
 # The lab's research themes. Order here is the order on the site.
+# topic: the two newest publications with this topic are listed as key papers.
+# Fields ending in _ja are the Japanese versions (keep Japanese text on one line).
 - id: t-cells
+  topic: t-cells
   title: How T cells rewrite their chromatin
+  title_ja: T細胞はクロマチンをどう書き換えるか
   summary: >-
     When a T cell is activated, its chromatin opens at the genes it needs
     next. We map those changes with epigenomic sequencing, down to single
     cells, and model them with statistics and machine learning to understand
     how immune regulation goes wrong in disease.
+  summary_ja: T細胞が活性化すると、次に必要となる遺伝子の領域でクロマチンが開きます。私たちはこの変化をシングルセルレベルまでエピゲノムシーケンスで捉え、統計学と機械学習でモデル化することで、疾患において免疫制御がどのように破綻するのかを明らかにしようとしています。
   methods: [ChIP-seq, ATAC-seq, Single-cell epigenomics, Machine learning]
+  methods_ja: [ChIP-seq, ATAC-seq, シングルセル・エピゲノミクス, 機械学習]
 
 - id: disease-signatures
+  topic: disease
   title: Disease signatures in large-scale molecular data
+  title_ja: 大規模分子データから疾患の特徴を捉える
   summary: >-
     We build sequencing-based analysis pipelines sensitive enough to catch
     molecular changes present in trace amounts. With clinical and basic
     science collaborators, we use them to classify and follow
     neurodegenerative, inflammatory and cancer-related disease.
+  summary_ja: 微量な分子変化も捉えられる、高感度なシーケンス解析パイプラインを開発しています。臨床・基礎研究の共同研究者とともに、神経変性疾患、炎症性疾患、がんの分類や病態の把握に応用しています。
   methods: [Next-generation sequencing, Omics pipelines, Statistical modelling, Clinical collaboration]
+  methods_ja: [次世代シーケンス, オミクス解析パイプライン, 統計モデリング, 臨床との共同研究]

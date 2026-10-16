@@ -12,10 +12,36 @@ HTML, CSS or JavaScript to keep the site current.
 |-------------------------------|-------------------------------|
 | News                          | `src/_data/news.yaml`         |
 | Publications                  | `src/_data/publications.yaml` |
-| Members                       | `src/_data/members.yaml`      |
+| Members and their profiles    | `src/_data/members.yaml`      |
 | Research themes               | `src/_data/research.yaml`     |
+| Publication topics (filters)  | `src/_data/topics.yaml`       |
 | Funding                       | `src/_data/funding.yaml`      |
-| Email, address, links         | `src/_data/site.yaml`         |
+| Email, Facebook, scholarship link | `src/_data/site.yaml`     |
+| Lab name, address, buttons, headings (both languages) | `src/_data/i18n.yaml` |
+
+The site has four pages in English (`/`, `/people/`, `/publications/`,
+`/news/`) and the same four in Japanese under `/ja/`. They all read from the
+same files, so a paper added once appears everywhere it should.
+
+### Japanese
+
+Any text field can have a Japanese twin with `_ja` added to its name, right
+next to the English one:
+
+```yaml
+- date: "2026-06"
+  text: Razil Bin Tahir joined the lab.
+  text_ja: Razil Bin Tahirさんが研究室に加わりました。
+```
+
+- If a `_ja` field is missing, the Japanese site shows the English text, so
+  nothing ever appears blank.
+- Keep Japanese text **on one line**. YAML's folded `>-` style joins lines with
+  a space, which puts stray spaces into Japanese sentences.
+- Use the full-width colon `：` in Japanese text. A half-width `:` at the end of
+  a line breaks the YAML file.
+- Paper titles, author names, and members' degrees and past positions stay in
+  English on both sites.
 
 Each file has instructions at the top. The usual pattern is to copy the first
 block, paste it above itself, and edit it.
@@ -25,13 +51,20 @@ block, paste it above itself, and edit it.
   get an initials tile.
 - **Featured papers**: add `featured: true` to show a paper on the home page.
   Four is a good number.
+- **Topics**: give each paper a `topic` (`t-cells`, `disease` or
+  `development`). It drives the filter on the Publications page, and the two
+  newest papers in a research theme's topic appear under it as key papers.
+- **Share previews**: `src/assets/img/og.png` (English) and `og-ja.png`
+  (Japanese) are the images shown when the site is linked on LINE, Facebook,
+  Slack, etc. If you change a headline, regenerate the matching image with a
+  1200×630 screenshot of the hero.
 
 Commit and push to `main`. GitHub builds and publishes the site in about a
 minute.
 
 ## Running locally
 
-Requires Node.js 18 or newer.
+Requires Node.js 20 or newer (the deploy uses 24).
 
 ```sh
 npm install

@@ -1,11 +1,24 @@
 # Lab members, in the order they appear on the site.
-# photo: optional, a file in src/assets/img/people/ (480x512 works best).
-#        Without one, the site shows the member's initials.
-# alumni: true moves someone to the alumni list.
+#
+# Required:  name, role
+# Optional:  short_name   shorter name for cards
+#            since        year they joined
+#            photo        file in src/assets/img/people/ (480x512 works best);
+#                         without one, the site shows the member's initials
+#            summary      one or two sentences about their work
+#            project      what they're working on in the lab
+#            education, experience, awards, expertise   lists of short lines
+#            links        list of { text, url }
+#            alumni: true moves someone to "Former members"
+#
+# Japanese: add the same field name ending in _ja (role_ja, bio_ja,
+#            summary_ja, project_ja, awards_ja, ...) on one line. Anything
+#            without a _ja version is shown in English on the Japanese site.
 
 - name: Masashi Yukawa
   name_ja: 湯川 将之
   role: Principal investigator, Senior Assistant Professor
+  role_ja: 研究室主宰者（PI）、講師
   photo: masashi-yukawa.jpg
   pi: true
   bio: >-
@@ -13,37 +26,167 @@
     fellow at Cincinnati Children's Hospital Medical Center, then Assistant
     Professor at The Chinese University of Hong Kong, before joining Ehime
     University in 2023.
+  bio_ja: 2013年、東京大学にて博士（生命科学）を取得。米国シンシナティ小児病院医療センターの博士研究員、香港中文大学医学部の助教授を経て、2023年より愛媛大学に着任。
+  career:
+    - years: 2023–
+      text: Senior Assistant Professor, Integrated Medical and Agricultural School of Public Health, Ehime University, Japan
+      text_ja: 愛媛大学 大学院医農融合公衆衛生学環 講師
+    - years: 2020–2023
+      text: Assistant Professor, Department of Chemical Pathology, Faculty of Medicine, The Chinese University of Hong Kong
+      text_ja: 香港中文大学 医学部 化学病理学科 助教授
+    - years: 2013–2020
+      text: Postdoctoral Fellow, Division of Allergy and Immunology, Cincinnati Children's Hospital Medical Center, USA
+      text_ja: 米国シンシナティ小児病院医療センター アレルギー・免疫部門 博士研究員
+    - years: "2013"
+      text: PhD in Life Science, The University of Tokyo
+      text_ja: 東京大学 博士（生命科学）
+  awards:
+    - year: 2022
+      text: Outstanding Paper Award, United Japanese researchers Around the world (UJA)
+      text_ja: 海外日本人研究者ネットワーク（UJA）Outstanding Paper Award
+    - year: 2019
+      text: Presentation Award, UJA Midwest Conference
+      text_ja: UJA Midwest Conference 発表賞
+    - year: 2019
+      text: Travel Award for Early Career Researchers Overseas, Molecular Biology Society of Japan
+      text_ja: 日本分子生物学会 海外若手研究者トラベルアワード
+    - year: 2017
+      text: Presentation Award, UJA Midwest Conference
+      text_ja: UJA Midwest Conference 発表賞
+    - year: 2016
+      text: Travel Award for Early Career Researchers Overseas, Molecular Biology Society of Japan
+      text_ja: 日本分子生物学会 海外若手研究者トラベルアワード
+    - year: 2016
+      text: Abstract Award, UJA Midwest Conference
+      text_ja: UJA Midwest Conference 抄録賞
+    - year: 2015
+      text: Careers in Immunology Fellowship, American Association of Immunologists
+      text_ja: 米国免疫学会（AAI）Careers in Immunology Fellowship
+    - year: 2011
+      text: Research Award, Global COE Program, The University of Tokyo
+      text_ja: 東京大学 グローバルCOEプログラム 研究賞
+    - year: 2008
+      text: JSPS Research Fellowship for Young Scientists (DC1)
+      text_ja: 日本学術振興会 特別研究員（DC1）
+  talks:
+    - year: 2023
+      text: "“Regulation of transcriptional program through chromatin structure in T cell activation”, Department of Microbiology, Faculty of Medicine, Chiang Mai University, Thailand"
+      text_ja: 特別講演「Regulation of transcriptional program through chromatin structure in T cell activation」チェンマイ大学 医学部 微生物学科（タイ）
+    - year: 2023
+      text: Lecture for SCMI 624 Special Topics in Microbiology and Immunology, Faculty of Graduate Studies, Mahidol University, Thailand
+      text_ja: マヒドン大学 大学院 SCMI 624 Special Topics in Microbiology and Immunology 講義（タイ）
+    - year: 2022
+      text: Systems Biology lecture, Tokyo University of Science
+      text_ja: 東京理科大学 システム生物学 講義
+    - year: 2022
+      text: Research talk and overseas career planning, UC-tomorrow
+      text_ja: UC-tomorrow 研究紹介と海外でのキャリアプラン
+    - year: 2021
+      text: Special lecture, Education Program for Development and Practice of Developmental Engineering Technology, University of Yamanashi
+      text_ja: 山梨大学 発生工学技術開発・実践教育プログラム 特別講義
+    - year: 2019
+      text: Research talk, School of Medicine, Keio University
+      text_ja: 慶應義塾大学 医学部 研究講演
+    - year: 2019
+      text: Research talk, Department of Animal Science and Biotechnology, Azabu University
+      text_ja: 麻布大学 動物応用科学科 研究講演
+  service:
+    - Technical Committee member and reviewer, 3rd International Conference on Materials Science and Engineering (2022)
+    - Technical Committee member and reviewer, International Conference on Biomaterials and Applications Engineering (2021)
+  service_ja:
+    - 3rd International Conference on Materials Science and Engineering（2022）Technical Committee 委員・査読者
+    - International Conference on Biomaterials and Applications Engineering（2021）Technical Committee 委員・査読者
 
 - name: Bronwyn Lok
   role: Postdoctoral researcher, Takeda Science Foundation
+  role_ja: ポスドク研究員（武田科学振興財団）
   since: 2026
   photo: bronwyn-lok.jpg
+  summary: >-
+    Works across mycology, bioinformatics, molecular biology, cancer and
+    angiogenesis.
+  summary_ja: 真菌学、バイオインフォマティクス、分子生物学、がん、血管新生の分野で研究しています。
+  education:
+    - PhD in Molecular Pathology, Universiti Sains Malaysia
+    - MSc in Pharmacology, Universiti Sains Malaysia
+    - BAppSc (Hons) in Biotechnology, Universiti Sains Malaysia
+  awards:
+    - Takeda Science Foundation International Fellowship (2026)
+    - Sanggar Sanjung Award for excellence in journal publication (2020)
+  links:
+    - text: ORCID
+      url: https://orcid.org/0000-0003-4523-0785
 
 - name: Ng Yan Hong
   role: Postdoctoral researcher, JSPS ASEAN
+  role_ja: ポスドク研究員（JSPS ASEAN）
   since: 2026
   photo: ng-yan-hong.jpg
+  education:
+    - PhD in Biochemistry, Universiti Kebangsaan Malaysia (2026)
+    - BSc (Hons) in Biochemistry, Universiti Kebangsaan Malaysia (2021)
+  experience:
+    - Graduate Research Assistant, Universiti Kebangsaan Malaysia (2022–2024)
+    - Research attachment, Universitas Padjadjaran, Indonesia (2024)
+    - Intern, Eurofins NM Laboratory, Penang, Malaysia (2021)
+  awards:
+    - JSPS Postdoctoral Fellowship for Research in Japan, short-term (2026)
 
 - name: Nik Nurnaeimah Binti Nik Muhammad Nasir
   short_name: Nik Nurnaeimah
   role: Postdoctoral researcher, JSPS ASEAN
+  role_ja: ポスドク研究員（JSPS ASEAN）
   since: 2026
+  project: AI-driven cellular deconvolution of plasma cfRNA for early cancer diagnostics.
+  project_ja: AIを用いた血漿cfRNAの細胞デコンボリューションによる、がんの早期診断法の開発。
+  education:
+    - PhD in Plant Biology and Biochemistry, Universiti Sultan Zainal Abidin (2025)
+    - MSc in Agricultural Biotechnology, Universiti Sultan Zainal Abidin (2017)
+    - BSc in Resource Biotechnology, Universiti Malaysia Sarawak (2014)
+    - Postgraduate Diploma in Teaching, Open University Malaysia (2026)
+  expertise: [Google Advanced Data Analytics, Google Business Intelligence, Microsoft Azure Data Fundamentals]
+  links:
+    - text: LinkedIn
+      url: https://www.linkedin.com/in/nik-nurnaeimah-nik-muhammad-nasir-081950150/
 
 - name: Razil Bin Tahir
   role: Researcher
+  role_ja: 研究員
   since: 2025
   photo: razil-bin-tahir.jpg
+  education:
+    - PhD in Computational Chemistry, University of Malaya (2020–)
+  experience:
+    - Intern, Faculty of Physics, Astronomy and Informatics, Nicolaus Copernicus University in Toruń, Poland (2025). Post-processing of molecular dynamics data with PCA, tICA and VAMP.
+    - Intern, Gene Regulatory Laboratory, National Chung Hsing University, Taiwan (2024–2025). Comparative single-cell transcriptomics of rice.
+    - Intern, RIKEN Center for Computational Science, Kobe (2023). Benchmarking molecular dynamics simulations on Fugaku.
+    - Research Assistant, Frontier Science and Self-Assembly Lab, University of Malaya (2019–2023). Molecular dynamics of membranes and fluorophores.
+    - Lab rotations, School of Biology, Nara Institute of Science and Technology (2020)
 
 - name: Fajrul Iman Giat Koentjoro
   role: Researcher
+  role_ja: 研究員
 
 - name: Aditya Pramar
   role: Research intern
+  role_ja: 研究インターン
   since: 2024
   photo: aditya-pramar.jpg
+  education:
+    - BTech in Data Science, Manipal University, India
+  experience:
+    - Research Intern, Big Data Lab, Indian Institute of Information Technology, Allahabad (2023)
+    - Data Analyst Trainee, National Informatics Centre, Government of India (2024)
+  expertise: [Machine learning, Statistical analysis, Computer vision, Data analytics]
 
 - name: Tomomi Doi
   role: Medical student, 6th year
+  role_ja: 医学部6年生
+  awards:
+    - Judges' Special Award and Special Award, Ehime University Project E research presentation (2026)
+  awards_ja:
+    - 愛媛大学 Project E 研究発表会 審査員特別賞・特別賞（2026）
 
 - name: Maruka Sekiya
   role: Medical student, 3rd year
+  role_ja: 医学部3年生

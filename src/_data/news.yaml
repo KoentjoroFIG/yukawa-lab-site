@@ -1,5 +1,7 @@
 # Newest first. To add news, copy a block to the top and edit it.
 # date: "YYYY-MM" (keep the quotes)
+# text_ja: Japanese version, on one line. If missing, the Japanese site
+#          shows the English text.
 # image: optional, a file in src/assets/img/lab/
 
 - date: "2026-06"
@@ -7,26 +9,32 @@
     Tomomi Doi received both the Judges' Special Award and the Special Award
     at Ehime University's Project E research presentation meeting.
     Congratulations!
+  text_ja: 愛媛大学 Project E 研究発表会で、Tomomi Doiさんが審査員特別賞と特別賞をダブル受賞しました。おめでとうございます!
 
 - date: "2026-06"
   text: >-
     Bronwyn Lok, Ng Yan Hong and Nik Nurnaeimah joined the lab from Malaysia
     as postdoctoral researchers.
+  text_ja: マレーシアから Bronwyn Lokさん、Ng Yan Hongさん、Nik Nurnaeimahさんがポスドク研究員として加わりました。
 
 - date: "2025-05"
   text: >-
     Tomomi Doi's project was selected for support under Ehime University's
     Project E program.
+  text_ja: Tomomi Doiさんの研究課題が、愛媛大学 Project E の支援対象に採択されました。
 
 - date: "2025-05"
   text: Razil Bin Tahir presented a poster at an internal conference.
+  text_ja: Razil Bin Tahirさんが学内の研究会でポスター発表を行いました。
 
 - date: "2025-05"
   text: >-
     Medical students Tomomi Doi and Maruka Sekiya started their own research
     projects in the lab.
+  text_ja: 医学生の Tomomi Doiさんと Maruka Sekiyaさんが、研究室で自身の研究プロジェクトを始めました。
   image: lab-dinner.jpg
 
 - date: "2025-04"
   text: Razil Bin Tahir joined the lab.
+  text_ja: Razil Bin Tahirさんが研究室に加わりました。
   image: lab-dinner-2.jpg

@@ -1,0 +1,18 @@
+{#- News page body, shared by /news.njk and /ja/news.njk. -#}
+<section class="section section-white section-tight" aria-label="{{ L.all_news_label }}">
+  <div class="wrap">
+    <ol class="news news-full">
+      {%- for item in news %}
+      <li class="news-item{% if item.image %} has-image{% endif %}">
+        <time class="news-date" datetime="{{ item.date }}">{{ item.date | monthYear(lang) }}</time>
+        <p>{{ item | loc("text", lang) }}</p>
+        {%- if item.image %}
+        <img class="news-image" src="/assets/img/lab/{{ item.image }}" alt="" loading="lazy">
+        {%- endif %}
+      </li>
+      {%- endfor %}
+    </ol>
+  </div>
+</section>
+
+{% include "cta.njk" %}

@@ -1,0 +1,8 @@
+{#- Duotone portrait or initials tile. Expects `m` (a member). -#}
+<div class="portrait{% if large %} portrait-lg{% endif %}">
+  {%- if m.photo %}
+  <img src="/assets/img/people/{{ m.photo }}" alt="{% if large %}{{ L.portrait_of | fill({ name: m.name_ja if (lang == 'ja' and m.name_ja) else m.name }) }}{% endif %}" width="480" height="512"{% if not large %} loading="lazy"{% endif %}>
+  {%- else %}
+  <span class="monogram" aria-hidden="true">{{ (m.short_name or m.name) | initials }}</span>
+  {%- endif %}
+</div>

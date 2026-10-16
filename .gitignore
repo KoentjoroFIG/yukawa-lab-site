@@ -1,2 +1,4 @@
 node_modules/
 _site/
+# Internal review checklist; kept off the public repo.
+REVIEW.md

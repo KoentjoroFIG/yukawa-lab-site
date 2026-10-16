@@ -1,0 +1,11 @@
+# Publication topics, used by the filter on the Publications page and to list
+# key papers under each research theme on the home page.
+- id: t-cells
+  label: T cell chromatin
+  label_ja: T細胞のクロマチン
+- id: disease
+  label: Disease and cell-free DNA
+  label_ja: 疾患とセルフリーDNA
+- id: development
+  label: Germline and development
+  label_ja: 生殖細胞と発生

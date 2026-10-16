@@ -1,0 +1,52 @@
+{#- Publications page body, shared by /publications.njk and /ja/publications.njk. -#}
+<section class="section section-white section-tight" aria-label="{{ L.publication_list }}">
+  <div class="wrap">
+    <div class="filter" role="group" aria-label="{{ L.filter_label }}" data-filter hidden
+      data-status-all="{{ L.filter_status_all }}" data-status-topic="{{ L.filter_status_topic }}">
+      <button type="button" aria-pressed="true" data-topic="" data-label="{{ L.filter_all }}">{{ L.filter_all }} <span class="filter-count">{{ publications | length }}</span></button>
+      {%- for t in topics %}
+      {%- set label = t | loc("label", lang) %}
+      <button type="button" aria-pressed="false" data-topic="{{ t.id }}" data-label="{{ label }}">{{ label }} <span class="filter-count">{{ publications | byTopic(t.id) | length }}</span></button>
+      {%- endfor %}
+    </div>
+    <p class="visually-hidden" aria-live="polite" data-filter-status></p>
+
+    {%- set hideYear = true %}{% set maxAuthors = 0 %}
+    {%- for group in publications | groupByYear %}
+    <section class="year-group" data-year-group aria-labelledby="y{{ group.year }}">
+      <h2 class="year-label" id="y{{ group.year }}">{{ group.year }}</h2>
+      <ol class="pub-list">
+        {%- for pub in group.items %}
+        <li class="pub-entry" data-topic="{{ pub.topic }}">
+          {% include "pub.njk" %}
+          <p class="pub-link"><a href="{{ pub | pubUrl }}">{{ pub | pubLinkLabel }}</a></p>
+        </li>
+        {%- endfor %}
+      </ol>
+    </section>
+    {%- endfor %}
+  </div>
+</section>
+
+<section id="funding" class="section section-light" aria-labelledby="funding-title">
+  <div class="wrap">
+    <header class="section-head">
+      <h2 id="funding-title">{{ L.funding_title }}</h2>
+      <p class="section-intro">{{ L.funding_intro }}</p>
+    </header>
+    <ul class="funding">
+      {%- for f in funding %}
+      <li>
+        <span class="funding-year">{{ f.year }}</span>
+        {%- if lang == "ja" %}
+        <span class="funding-name" lang="ja">{{ f.name_ja }}<span class="funding-alt" lang="en">{{ f.name }}</span></span>
+        {%- else %}
+        <span class="funding-name">{{ f.name }}<span class="funding-alt" lang="ja">{{ f.name_ja }}</span></span>
+        {%- endif %}
+      </li>
+      {%- endfor %}
+    </ul>
+  </div>
+</section>
+
+{% include "cta.njk" %}

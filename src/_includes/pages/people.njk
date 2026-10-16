@@ -1,0 +1,80 @@
+{#- People page body, shared by /people.njk and /ja/people.njk. -#}
+{%- for m in members %}{% if m.pi %}
+<section class="section section-light section-tight" aria-labelledby="{{ m.name | slugify }}-name">
+  <div class="wrap">
+    <article class="pi pi-full" id="{{ m.name | slugify }}">
+      {% set large = true %}{% include "portrait.njk" %}{% set large = false %}
+      <div class="pi-body">
+        <h2 class="pi-name" id="{{ m.name | slugify }}-name">{% include "pi-name.njk" %}</h2>
+        <p class="pi-role">{{ m | loc("role", lang) }}</p>
+        <p>{{ m | loc("bio", lang) }}</p>
+        <p><a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
+      </div>
+    </article>
+
+    <div class="cv">
+      {%- for block in [["cv-career", L.career, m.career, "years"], ["cv-awards", L.awards_fellowships, m.awards, "year"], ["cv-talks", L.talks, m.talks, "year"]] %}
+      <section class="cv-block" aria-labelledby="{{ block[0] }}">
+        <h3 id="{{ block[0] }}">{{ block[1] }}</h3>
+        <ol class="cv-list">
+          {%- for item in block[2] %}<li><span class="cv-when">{{ item[block[3]] }}</span><span>{{ item | loc("text", lang) }}</span></li>{% endfor %}
+        </ol>
+      </section>
+      {%- endfor %}
+      <section class="cv-block" aria-labelledby="cv-service">
+        <h3 id="cv-service">{{ L.service }}</h3>
+        <ul class="cv-list cv-list-plain">
+          {%- for s in m | loc("service", lang) %}<li>{{ s }}</li>{% endfor %}
+        </ul>
+      </section>
+    </div>
+  </div>
+</section>
+{%- endif %}{% endfor %}
+
+<section class="section section-white" aria-labelledby="team-title">
+  <div class="wrap">
+    <header class="section-head">
+      <h2 id="team-title">{{ L.team }}</h2>
+    </header>
+    <div class="profiles">
+      {%- for m in members %}{% if not m.pi and not m.alumni %}
+      <article class="profile" id="{{ m.name | slugify }}">
+        {% include "portrait.njk" %}
+        <div class="profile-body">
+          <h3 class="profile-name">{{ m.name_ja if (lang == "ja" and m.name_ja) else m.name }}</h3>
+          <p class="profile-role">{{ m | loc("role", lang) }}{% if m.since %}{{ L.since | fill({ year: m.since }) }}{% endif %}</p>
+          {%- set summary = m | loc("summary", lang) %}
+          {%- if summary %}<p class="profile-summary">{{ summary }}</p>{% endif %}
+          {%- set project = m | loc("project", lang) %}
+          {%- if project %}<p class="profile-summary"><span class="profile-label">{{ L.project_label }}</span> {{ project }}</p>{% endif %}
+          <div class="profile-details">
+            {%- for section in [[L.education, "education"], [L.experience, "experience"], [L.awards, "awards"], [L.skills, "expertise"]] %}
+            {%- set lines = m | loc(section[1], lang) %}
+            {%- if lines %}
+            <div>
+              <h4>{{ section[0] }}</h4>
+              <ul{% if lang != "en" and not m[section[1] + "_" + lang] %} lang="en"{% endif %}>{% for line in lines %}<li>{{ line }}</li>{% endfor %}</ul>
+            </div>
+            {%- endif %}
+            {%- endfor %}
+          </div>
+          {%- if m.links %}
+          <p class="profile-links">{% for l in m.links %}<a href="{{ l.url }}">{{ l.text }}</a>{% endfor %}</p>
+          {%- endif %}
+        </div>
+      </article>
+      {%- endif %}{% endfor %}
+    </div>
+
+    {%- set alumni = members | selectattr("alumni") %}
+    {%- if alumni | length %}
+    <h2 class="alumni-title">{{ L.former_members }}</h2>
+    <ul class="alumni">
+      {%- for m in alumni %}<li><strong>{{ m.name }}</strong>, {{ m | loc("role", lang) }}</li>{% endfor %}
+    </ul>
+    {%- endif %}
+  </div>
+</section>
+
+{% include "cta.njk" %}

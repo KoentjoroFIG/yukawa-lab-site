@@ -1,0 +1,11 @@
+{#- One publication. Expects `pub`; optionally set `maxAuthors` (0 = all)
+    and `hideYear` before including. Papers are always in English. -#}
+{%- set en = ' lang="en"' if lang != "en" else "" %}
+<h3 class="pub-title"{{ en | safe }}><a href="{{ pub | pubUrl }}">{{ pub.title }}</a></h3>
+<p class="pub-authors"{{ en | safe }}>{{ pub.authors | authorList(maxAuthors) | safe }}</p>
+<p class="pub-journal"{{ en | safe }}><em>{{ pub.journal }}</em> {{ pub.details }}{% if not hideYear %} ({{ pub.year }}){% endif %}</p>
+{%- if pub.notes %}
+<ul class="pub-notes"{{ en | safe }}>
+  {%- for n in pub.notes %}<li>{% if n.url %}<a href="{{ n.url }}">{{ n.text }}</a>{% else %}{{ n.text }}{% endif %}</li>{% endfor %}
+</ul>
+{%- endif %}

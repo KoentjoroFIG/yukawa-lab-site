@@ -1,0 +1,192 @@
+# Interface text in each language. Page content lives in the other data
+# files, where any field can have a Japanese twin ending in _ja.
+en:
+  lab_name: Yukawa Lab
+  field: Chromatin Biology
+  tagline: Chromatin Biology, Ehime University
+  institution: Ehime University
+  school: Integrated Medical and Agricultural School of Public Health
+  address: School of Medicine Main Building, 454 Shitsukawa, Toon, Ehime 791-0204, Japan
+  description: >-
+    Yukawa Lab at Ehime University studies how chromatin opens and closes in
+    T cells and in disease, using epigenomic experiments and bioinformatics.
+  og_image: /assets/img/og.png
+  og_locale: en_US
+  og_alt: "Yukawa Lab: How chromatin opens decides what a cell becomes."
+
+  skip: Skip to content
+  home_label: Yukawa Lab, home
+  menu: Menu
+  nav_label: Main
+  nav_research: Research
+  nav_people: People
+  nav_publications: Publications
+  nav_news: News
+  nav_join: Join the lab
+  switch_label: 日本語
+  switch_lang: ja
+  contact: Contact
+  explore: Explore
+  publications_and_funding: Publications and funding
+  other_language_site: 日本語のサイト
+
+  hero_title: How chromatin opens decides what a cell becomes.
+  hero_lede: >-
+    We study how the genome is packaged and unpacked in T cells and in
+    disease, combining epigenomic experiments with bioinformatics at Ehime
+    University.
+  see_research: See our research
+  fiber_label: Where the chromatin opens
+  fiber_desc: >-
+    Animated chromatin fiber: DNA wrapped around histone beads. Where the
+    fiber opens, the beads slide apart, the AP-1 transcription factor binds
+    the exposed DNA, and an accessibility signal track below rises into a
+    peak. Use the left and right arrow keys to move the opening.
+  fiber_track: Chromatin accessibility
+  fiber_hint: Move along the fiber to open it, the way T cell activation does.
+  fiber_hint_touch: Drag along the fiber to open it, the way T cell activation does.
+
+  research: Research
+  research_intro: >-
+    Two questions run through the lab: how immune cells switch genes on by
+    remodelling chromatin, and how molecular data can read disease.
+  methods: Methods
+  key_papers: Key papers
+  selected_publications: Selected publications
+  pubs_intro: "{n} publications since {year}, from germline epigenetics to immune chromatin."
+  all_publications: "All {n} publications and funding"
+  people: People
+  people_intro: A small, international team. We work in English and Japanese.
+  pi_more: Full profile, awards and talks
+  meet_team: Meet the team
+  since: ", since {year}"
+  news: News
+  all_news: All news
+
+  join_title: Join the lab
+  join_lede: >-
+    We're recruiting graduate students and research interns from Japan and
+    overseas. You can work in English, Japanese or both.
+  join_fit: "The lab is a good fit if you:"
+  join_points:
+    - want to study epigenetics
+    - want to learn experimental techniques and computational analysis side by side
+  email_pi: Email Dr. Yukawa
+  email_subject: Joining Yukawa Lab
+  scholarships: Scholarships at Ehime University
+  join_photo_alt: Lab members sharing a meal together at a restaurant
+  cta_title: Interested in joining the lab?
+  cta_text: We're recruiting graduate students and research interns from Japan and overseas.
+  how_to_join: How to join
+
+  filter_label: Filter by topic
+  filter_all: All
+  filter_status_all: "Showing all {n} publications"
+  filter_status_topic: "Showing {n} publications on {topic}"
+  publication_list: Publication list
+  funding_title: Research funding
+  funding_intro: >-
+    Competitive grants led by Dr. Yukawa. Thank you to every foundation and
+    agency that supports our work.
+
+  career: Career
+  awards_fellowships: Awards and fellowships
+  talks: Invited talks and lectures
+  service: Service
+  team: Team
+  project_label: "Project in the lab:"
+  education: Education
+  experience: Experience
+  awards: Awards
+  skills: Skills
+  former_members: Former members
+  portrait_of: "Portrait of {name}"
+  all_news_label: All news
+
+ja:
+  lab_name: 湯川研究室
+  field: クロマチン生物学
+  tagline: 愛媛大学 クロマチン生物学
+  institution: 愛媛大学
+  school: 大学院医農融合公衆衛生学環
+  address: 〒791-0204 愛媛県東温市志津川454 愛媛大学医学部本館
+  description: 愛媛大学 湯川研究室は、T細胞や疾患においてクロマチンがどのように開き、閉じるのかを、エピゲノム実験とバイオインフォマティクスで研究しています。
+  og_image: /assets/img/og-ja.png
+  og_locale: ja_JP
+  og_alt: 湯川研究室：クロマチンの開き方が、細胞の運命を決める。
+
+  skip: 本文へスキップ
+  home_label: 湯川研究室 ホーム
+  menu: メニュー
+  nav_label: メイン
+  nav_research: 研究内容
+  nav_people: メンバー
+  nav_publications: 論文
+  nav_news: ニュース
+  nav_join: メンバー募集
+  switch_label: English
+  switch_lang: en
+  contact: お問い合わせ
+  explore: ページ一覧
+  publications_and_funding: 論文・研究費
+  other_language_site: English site
+
+  hero_title: クロマチンの開き方が、細胞の運命を決める。
+  hero_lede: 私たちは愛媛大学で、T細胞や疾患においてゲノムがどのように折りたたまれ、ほどかれるのかを、エピゲノム実験とバイオインフォマティクスを組み合わせて研究しています。
+  see_research: 研究内容を見る
+  fiber_label: クロマチンが開く位置
+  fiber_desc: クロマチン線維のアニメーション。DNAがヒストンに巻き付いています。線維が開いた場所ではヌクレオソームが離れ、転写因子AP-1が露出したDNAに結合し、下のアクセシビリティのシグナルがピークとして立ち上がります。左右の矢印キーで開く位置を動かせます。
+  fiber_track: クロマチンアクセシビリティ
+  fiber_hint: 線維に沿ってポインタを動かすと、T細胞の活性化のようにクロマチンが開きます。
+  fiber_hint_touch: 線維に沿ってドラッグすると、T細胞の活性化のようにクロマチンが開きます。
+
+  research: 研究内容
+  research_intro: 研究室には二つの問いがあります。免疫細胞はクロマチンをどのように再構成して遺伝子をオンにするのか。そして、分子データから疾患をどう読み解くのか。
+  methods: 手法
+  key_papers: 主要論文
+  selected_publications: 主な論文
+  pubs_intro: "{year}年以降の論文{n}報。生殖細胞のエピジェネティクスから免疫細胞のクロマチンまで。"
+  all_publications: "論文{n}報と研究費をすべて見る"
+  people: メンバー
+  people_intro: 国際的な少人数のチームです。英語と日本語で研究しています。
+  pi_more: 詳しいプロフィール・受賞歴・講演
+  meet_team: メンバー紹介を見る
+  since: "、{year}年〜"
+  news: ニュース
+  all_news: すべてのニュース
+
+  join_title: メンバー募集
+  join_lede: 国内外から大学院生・研究インターンを募集しています。英語でも日本語でも、両方でも研究できます。
+  join_fit: こんな方を歓迎します。
+  join_points:
+    - エピジェネティクスを研究したい方
+    - 実験技術と計算解析の両方を身につけたい方
+  email_pi: メールで問い合わせる
+  email_subject: 湯川研究室への参加について
+  scholarships: 愛媛大学の奨学金情報
+  join_photo_alt: 研究室メンバーがレストランで食事をしている様子
+  cta_title: 研究室に興味のある方へ
+  cta_text: 国内外から大学院生・研究インターンを募集しています。
+  how_to_join: 参加について
+
+  filter_label: トピックで絞り込む
+  filter_all: すべて
+  filter_status_all: "全{n}報を表示中"
+  filter_status_topic: "「{topic}」の論文{n}報を表示中"
+  publication_list: 論文一覧
+  funding_title: 研究費
+  funding_intro: 湯川が研究代表者を務める競争的研究資金です。ご支援いただいているすべての財団・機関に感謝申し上げます。
+
+  career: 経歴
+  awards_fellowships: 受賞・フェローシップ
+  talks: 招待講演・講義
+  service: 学会活動
+  team: 研究室メンバー
+  project_label: 研究室でのテーマ：
+  education: 学歴
+  experience: 職歴・研究歴
+  awards: 受賞
+  skills: スキル
+  former_members: 過去のメンバー
+  portrait_of: "{name}の写真"
+  all_news_label: すべてのニュース

@@ -1,0 +1,6 @@
+{#- PI's name: native script first on Japanese pages, with the other underneath. -#}
+{%- if lang == "ja" and m.name_ja -%}
+{{ m.name_ja }}<span class="pi-name-alt" lang="en">{{ m.name }}</span>
+{%- else -%}
+{{ m.name }}{% if m.name_ja %}<span class="pi-name-alt" lang="ja">{{ m.name_ja }}</span>{% endif %}
+{%- endif -%}
