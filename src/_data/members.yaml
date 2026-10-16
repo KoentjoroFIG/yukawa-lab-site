@@ -1,0 +1,49 @@
+# Lab members, in the order they appear on the site.
+# photo: optional, a file in src/assets/img/people/ (480x512 works best).
+#        Without one, the site shows the member's initials.
+# alumni: true moves someone to the alumni list.
+
+- name: Masashi Yukawa
+  name_ja: 湯川 将之
+  role: Principal investigator, Senior Assistant Professor
+  photo: masashi-yukawa.jpg
+  pi: true
+  bio: >-
+    PhD in Life Science from The University of Tokyo (2013). Postdoctoral
+    fellow at Cincinnati Children's Hospital Medical Center, then Assistant
+    Professor at The Chinese University of Hong Kong, before joining Ehime
+    University in 2023.
+
+- name: Bronwyn Lok
+  role: Postdoctoral researcher, Takeda Science Foundation
+  since: 2026
+  photo: bronwyn-lok.jpg
+
+- name: Ng Yan Hong
+  role: Postdoctoral researcher, JSPS ASEAN
+  since: 2026
+  photo: ng-yan-hong.jpg
+
+- name: Nik Nurnaeimah Binti Nik Muhammad Nasir
+  short_name: Nik Nurnaeimah
+  role: Postdoctoral researcher, JSPS ASEAN
+  since: 2026
+
+- name: Razil Bin Tahir
+  role: Researcher
+  since: 2025
+  photo: razil-bin-tahir.jpg
+
+- name: Fajrul Iman Giat Koentjoro
+  role: Researcher
+
+- name: Aditya Pramar
+  role: Research intern
+  since: 2024
+  photo: aditya-pramar.jpg
+
+- name: Tomomi Doi
+  role: Medical student, 6th year
+
+- name: Maruka Sekiya
+  role: Medical student, 3rd year

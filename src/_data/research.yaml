@@ -1,0 +1,18 @@
+# The lab's research themes. Order here is the order on the site.
+- id: t-cells
+  title: How T cells rewrite their chromatin
+  summary: >-
+    When a T cell is activated, its chromatin opens at the genes it needs
+    next. We map those changes with epigenomic sequencing, down to single
+    cells, and model them with statistics and machine learning to understand
+    how immune regulation goes wrong in disease.
+  methods: [ChIP-seq, ATAC-seq, Single-cell epigenomics, Machine learning]
+
+- id: disease-signatures
+  title: Disease signatures in large-scale molecular data
+  summary: >-
+    We build sequencing-based analysis pipelines sensitive enough to catch
+    molecular changes present in trace amounts. With clinical and basic
+    science collaborators, we use them to classify and follow
+    neurodegenerative, inflammatory and cancer-related disease.
+  methods: [Next-generation sequencing, Omics pipelines, Statistical modelling, Clinical collaboration]

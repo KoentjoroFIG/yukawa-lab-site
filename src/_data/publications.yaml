@@ -1,0 +1,137 @@
+# Newest first. To add a paper, copy a block to the top and edit it.
+# featured: true  shows the paper under "Selected publications" on the home page.
+# doi: without the https://doi.org/ prefix. If there's no DOI, the site
+#      links to a PubMed search for the title instead.
+# notes: optional list of highlights (press, awards, recommendations).
+
+- title: Functional redundancy between UTY and UTX in regulating the localization of transcription factors involved in pluripotency
+  authors: [Tomohiko Akiyama, Toshiya Nakahara, Saeko Sato, Kei-Ichiro Ishiguro, Masashi Yukawa, Miu Yamamoto, Hidehisa Takahashi, Minoru S H Ko]
+  journal: Development
+  year: 2026
+  details: 153(9):dev205328
+
+- title: Site-specific DNA demethylation during spermatogenesis presets the sites of nucleosome retention in mouse sperm
+  authors: [So Maezawa, Masashi Yukawa, Akihiko Sakashita, Artem Barski, Satoshi H Namekawa]
+  journal: eLife
+  year: 2025
+  details: Reviewed preprint
+
+- title: Histone modifications of circulating nucleosomes are associated with changes in cell-free DNA fragmentation patterns
+  authors: [Jinyue Bai, Peiyong Jiang, Lu Ji, W K Jacky Lam, Qing Zhou, Mary-Jane L Ma, Spencer C Ding, Saravanan Ramakrishnan, Chun Wai Wan, Tongxin Claire Yang, Masashi Yukawa, Rebecca W Y Chan, Rong Qiao, Stephanie C Y Yu, L Y Lois Choy, Yuwei Shi, Zilong Wang, Tommy H C Tam, Man Fai Law, Raymond S M Wong, John Wong, Stephen Lam Chan, Grace L H Wong, Vincent W S Wong, K C Allen Chan, Y M Dennis Lo]
+  journal: Proceedings of the National Academy of Sciences
+  year: 2024
+  details: 121(42):e2404058121
+  featured: true
+
+- title: ZSCAN4-binding motif TGCACAC is conserved and enriched in CA/TG microsatellites in both mouse and human genomes
+  authors: [T Akiyama, K Ishiguro, N Chikazawa, SH Ko, M Yukawa, MH Ko]
+  journal: DNA Research
+  year: 2024
+  details: 31(1)
+
+- title: PRC1 suppresses a female gene regulatory network to ensure testicular differentiation
+  authors: [So Maezawa, Masashi Yukawa, Kazuteru Hasegawa, Ryo Sugiyama, Mengwen Hu, Akihiko Sakashita, Miguel Vidal, Haruhiko Koseki, Artem Barski, Tony DeFalco, Satoshi H Namekawa]
+  journal: Cell Death & Differentiation
+  year: 2023
+  details: 14(8):501
+
+- title: An atlas of gene regulatory networks for T memory cells in youth and old age
+  authors: [Joseph A Wayman, Alyssa Thomas, Anthony Bejjani, Alexander Katko, Maha Almanan, Alzbeta Godarova, Svetlana Korinfskaya, Tareian A Cazares, Masashi Yukawa, Leah C Kottyan, Artem Barski, Claire A Chougnet, David A Hildeman, Emily R Miraldi]
+  journal: bioRxiv
+  year: 2023
+  details: Preprint
+  doi: 10.1101/2023.03.07.531590
+
+- title: Effects of nucleases on cell-free extrachromosomal circular DNA
+  authors: [ST Sin, J Deng, L Ji, M Yukawa, RW Chan, S Volpi, A Vaglio, P Fenaroli, P Bocca, SH Cheng, DK Wong, KO Lui, P Jiang, KCA Chan, RW Chiu, YMD Lo]
+  journal: JCI Insight
+  year: 2022
+  details: 7(8):e156070
+
+- title: Endogenous retroviruses drive species-specific germline transcriptomes in mammals
+  authors: [Akihiko Sakashita, So Maezawa, Kazuki Takahashi, Kris G Alavattam, Masashi Yukawa, Yueh-Chiang Hu, Shohei Kojima, Nicholas F Parrish, Artem Barski, Mihaela Pavlicev, Satoshi H Namekawa]
+  journal: Nature Structural & Molecular Biology
+  year: 2020
+  details: "27:967–977"
+
+- title: Super-enhancer switching drives a burst in gene expression at the mitosis-to-meiosis transition
+  authors: [So Maezawa, Akihiko Sakashita, Masashi Yukawa, Xiaoting Chen, Kazuki Takahashi, Kris G Alavattam, Ippo Nakata, Matthew T Weirauch, Artem Barski, Satoshi H Namekawa]
+  journal: Nature Structural & Molecular Biology
+  year: 2020
+  details: "27:978–988"
+  featured: true
+
+- title: AP-1 activity induced by co-stimulation is required for chromatin opening during T cell activation
+  authors: [Masashi Yukawa, Sajjeev Jagannathan, Sushmitha Vallabh, Andrey V Kartashov, Xiaoting Chen, Matthew T Weirauch, Artem Barski]
+  journal: Journal of Experimental Medicine
+  year: 2020
+  details: 217(1)
+  featured: true
+  notes:
+    - text: Selected by preLights
+      url: https://prelights.biologists.com/highlights/co-stimulation-induced-ap-1-activity-is-required-for-chromatin-opening-during-t-cell-activation/
+    - text: Press release, Cincinnati Children's
+      url: https://www.cincinnatichildrens.org/news/release/2019/immune-diseases
+    - text: Recommended in F1000Prime
+    - text: UJA Outstanding Paper Award 2022
+
+- title: Polycomb protein SCML2 facilitates H3K27me3 to establish bivalent domains in the male germline
+  authors: [So Maezawa, Kazuteru Hasegawa, Masashi Yukawa, Naoki Kubo, Akihiko Sakashita, Kris G Alavattam, Ho-Su Sin, Andrey V Kartashov, Hiroyuki Sasaki, Artem Barski, Satoshi H Namekawa]
+  journal: Proceedings of the National Academy of Sciences
+  year: 2018
+  details: 115(19):4957–4962
+
+- title: Transcription factors operate across disease loci, with EBNA2 implicated in autoimmunity
+  authors: [John B Harley, Xiaoting Chen, Mario Pujato, Daniel Miller, Avery Maddox, Carmy Forney, Albert F Magnusen, Arthur Lynch, Kashish Chetal, Masashi Yukawa, Artem Barski, Nathan Salomonis, Kenneth M Kaufman, Leah C Kottyan, Matthew T Weirauch]
+  journal: Nature Genetics
+  year: 2018
+  details: 50(5):699–707
+  featured: true
+
+- title: Dynamic reorganization of open chromatin underlies diverse transcriptomes during spermatogenesis
+  authors: [So Maezawa, Masashi Yukawa, Kris G Alavattam, Artem Barski, Satoshi H Namekawa]
+  journal: Nucleic Acids Research
+  year: 2018
+  details: 46(2):593–608
+
+- title: Polycomb directs timely activation of germline genes in spermatogenesis
+  authors: [S Maezawa, K Hasegawa, M Yukawa, A Sakashita, K Alavattam, P Andreassen, M Vidal, H Koseki, A Barski, SH Namekawa]
+  journal: Genes & Development
+  year: 2017
+  details: 31(16):1693–1703
+
+- title: Genomic integration of Wnt/β-catenin and BMP/Smad1 signaling coordinates foregut and hindgut transcriptional programs
+  authors: [ML Stevens, P Chaturvedi, SA Rankin, M Macdonald, S Jagannathan, M Yukawa, A Barski, AM Zorn]
+  journal: Development
+  year: 2017
+  details: 144(7):1283–1295
+
+- title: Functional characterization of human T cell hyporesponsiveness induced by CTLA4-Ig
+  authors: [Y Rochman, M Yukawa, AV Kartashov, A Barski]
+  journal: PLoS One
+  year: 2015
+  details: 10(4):e0122198
+
+- title: Genome-wide analysis of the chromatin composition of histone H2A and H3 variants in mouse embryonic stem cells
+  authors: [M Yukawa, T Akiyama, V Franke, N Mise, T Isagawa, Y Suzuki, MG Suzuki, K Vlahovicek, K Abe, H Aburatani, F Aoki]
+  journal: PLoS One
+  year: 2014
+  details: 9(3):e92689
+
+- title: Changes in the nuclear deposition of histone H2A variants during pre-implantation development in mice
+  authors: [B Nashun, M Yukawa, H Liu, T Akiyama, F Aoki]
+  journal: Development
+  year: 2010
+  details: "137:3785–3794"
+
+- title: Deficiency in the response to DNA double-strand breaks in mouse early preimplantation embryos
+  authors: [M Yukawa, S Oda, H Mitani, M Nagata, F Aoki]
+  journal: Biochemical and Biophysical Research Communications
+  year: 2007
+  details: "358:578–584"
+
+- title: Autocrine activation of EGF receptor promotes oscillation of glutamate-induced calcium increase in astrocytes cultured in rat cerebral cortex
+  authors: [M Morita, N Kozuka, R Itofusa, M Yukawa, Y Kudo]
+  journal: Journal of Neurochemistry
+  year: 2005
+  details: "95:871–879"

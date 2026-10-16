@@ -1,0 +1,32 @@
+# Newest first. To add news, copy a block to the top and edit it.
+# date: "YYYY-MM" (keep the quotes)
+# image: optional, a file in src/assets/img/lab/
+
+- date: "2026-06"
+  text: >-
+    Tomomi Doi received both the Judges' Special Award and the Special Award
+    at Ehime University's Project E research presentation meeting.
+    Congratulations!
+
+- date: "2026-06"
+  text: >-
+    Bronwyn Lok, Ng Yan Hong and Nik Nurnaeimah joined the lab from Malaysia
+    as postdoctoral researchers.
+
+- date: "2025-05"
+  text: >-
+    Tomomi Doi's project was selected for support under Ehime University's
+    Project E program.
+
+- date: "2025-05"
+  text: Razil Bin Tahir presented a poster at an internal conference.
+
+- date: "2025-05"
+  text: >-
+    Medical students Tomomi Doi and Maruka Sekiya started their own research
+    projects in the lab.
+  image: lab-dinner.jpg
+
+- date: "2025-04"
+  text: Razil Bin Tahir joined the lab.
+  image: lab-dinner-2.jpg
