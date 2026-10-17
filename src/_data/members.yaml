@@ -164,8 +164,20 @@
     - Lab rotations, School of Biology, Nara Institute of Science and Technology (2020)
 
 - name: Fajrul Iman Giat Koentjoro
-  role: Researcher
-  role_ja: 研究員
+  role: Research Student
+  role_ja: 研究生
+  since: 2025
+  photo: fajrul-koentjoro.jpg
+  education:
+    - BEng in Electrical Engineering, Universitas Jenderal Soedirman, Indonesia (2023)
+  experience:
+    - AI Engineer. Soji AI, Hamburg, Germany/Remote (2026). RnD of AI agents for processing aircraft documents.
+    - Lead AI Software Engineer. AICORE Network Solution, Purwokerto, Indonesia (2025). Development of AI secretary application.
+    - Backend and ML Engineer. Bears Cinta Kamu, Purwokerto, Indonesia (2024-2025). Development of business flow automation app.
+    - Head Programming Instructor. Coding First, Purwokerto, Indonesia (2024-2026). Teaching programming for school students.
+    - Student Intern. Nara Institute of Science and Technology, Nara, Japan (2023). Research on AI for drug discovery.
+  awards:
+    - INPEX Scholarship, Ehime University, Japan (2026). Full scholarship for Master's degree in Public Health.
 
 - name: Aditya Pramar
   role: Research intern
